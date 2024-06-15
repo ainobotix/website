@@ -1,0 +1,6 @@
+.success{
+    display: none;
+    color: green; 
+    padding: 10px 10px; 
+    font-weight: bold; 
+}
