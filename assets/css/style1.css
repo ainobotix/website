@@ -5,4 +5,10 @@
     font-weight: bold; 
 }
 
+.navbar-brand {
+    color: #FFFF !important; /* Change this to your desired color */
+  }
+.nav-link{
+    color: white;
+}
   

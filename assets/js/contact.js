@@ -55,6 +55,11 @@ const firebaseConfig = {
   }
   document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('.toggleButton');
+    
+    var navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+    });
 
     buttons.forEach(button => {
         button.addEventListener('click', function() {
