@@ -1,0 +1,26 @@
+.confirm{
+    display: none;
+    color: green; 
+    padding: 10px 10px; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+section{
+    /* background: url('../img/register-1.jpg') no-repeat center center fixed; */
+    background-color: transparent;
+}
+
+::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/register-1.jpg') no-repeat center center fixed;
+    overflow: hidden;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1; /* Make sure the blur layer is behind content */
+}
