@@ -4908,6 +4908,24 @@ textarea.form-control-lg {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
 }
 
+@media (max-width: 990px) {
+    .page-link {
+        font-size: 0.8rem; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .page-link {
+        font-size: 0.6rem; /* Adjusted for even smaller screens */
+    }
+}
+
+@media (max-width: 325px) {
+    .page-link {
+        font-size: 0.2rem;
+    }
+}
+
 @media(prefers-reduced-motion: reduce) {
     .page-link {
         transition: none
