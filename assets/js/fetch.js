@@ -20,12 +20,13 @@
         const data = snapshot.val();
         const tbody = document.getElementById('data-table-body');
         tbody.innerHTML = '';
+        let serialNumber = 1;
   
         for (const key in data) {
           if (data.hasOwnProperty(key)) {
             const row = document.createElement('tr');
             row.innerHTML = `
-              <td>${key}</td>
+              <td>${serialNumber++}</td>
               <td>${data[key].name}</td>
               <td>${data[key].email}</td>
               <td>${data[key].class}</td>
@@ -43,12 +44,13 @@
         const data = snapshot.val();
         const tbody = document.getElementById('contact-table');
         tbody.innerHTML = '';
+        let serialNumber = 1;
   
         for (const key in data) {
           if (data.hasOwnProperty(key)) {
             const row = document.createElement('tr');
             row.innerHTML = `
-              <td>${key}</td>
+              <td>${serialNumber++}</td>
               <td>${data[key].name}</td>
               <td>${data[key].email}</td>
               <td>${data[key].phone}</td>
@@ -58,6 +60,45 @@
           }
         }
       });
+
+      // Function to clear data from database
+      function clearData(nodePath) {
+        const dataRef = database.ref(nodePath);
+        dataRef.set(null)
+          .then(() => {
+            document.getElementById('alert-status').textContent = `Data at ${nodePath} Database has been cleared.`;
+          })
+          .catch((error) => {
+            document.getElementById('alert-status').textContent = `Failed to clear data at ${nodePath} Database: ${error.message}`;
+          });
+      }
+
+      document.getElementById('clear-data-reg').addEventListener('click', () => {
+        clearData('registration');
+      });
+
+      const toastTrigger1 = document.getElementById('clear-data-reg')
+      const toastLiveExample = document.getElementById('liveToast')
+
+      if (toastTrigger1) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger1.addEventListener('click', () => {
+          toastBootstrap.show()
+        })
+      }
+
+      document.getElementById('clear-data-con').addEventListener('click', () => {
+        clearData('contactus');
+      });
+
+      const toastTrigger2 = document.getElementById('clear-data-con')
+
+      if (toastTrigger2) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger2.addEventListener('click', () => {
+          toastBootstrap.show()
+        })
+      }
 
       document.addEventListener("DOMContentLoaded", function() {
         const buttons = document.querySelectorAll('.toggleButton');

@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <nav class="navbar bg-secondary fixed-top">
+    <nav class="navbar bg-primary fixed-top">
     <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-menu" aria-controls="offcanvas-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-menu" aria-controls="offcanvas-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <span class="navbar-brand " href="#">Admin Panel</span>
+    <span class="navbar-brand" href="#" style="color: white;">Admin Panel</span>
     <div class="offcanvas offcanvas-start bg-body" tabindex="-1" data-bs-backdrop="false" id="offcanvas-menu">
-        <div class="offcanvas-header"><a class="link-body-emphasis d-flex align-items-center me-md-auto mb-3 mb-md-0 text-decoration-none" href="/"><span class="fs-4 text-black">Dashboard</span></a><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-header" ><a class="link-body-emphasis d-flex align-items-center me-md-auto mb-3 mb-md-0 text-decoration-none"><span class="fs-4 text-black">Dashboard</span></a><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button></div>
         <div class="offcanvas-body d-flex flex-column justify-content-between pt-0">
             <div>
                 <hr class="mt-0">
@@ -26,10 +26,10 @@
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="toggleButton nav-link link-body-emphasis text-black" href="#" data-target="content1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-people me-2">
+                    <li class="nav-item"><a class="toggleButton nav-link link-body-emphasis text-black" href="#" data-target="content1" data-bs-dismiss="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-people me-2">
                                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path>
                             </svg> Registered Students</a>
-                    <li class="nav-item"><a class="toggleButton nav-link link-body-emphasis text-black" href="#" data-target="content2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-people me-2">
+                    <li class="nav-item"><a class="toggleButton nav-link link-body-emphasis text-black" href="#" data-target="content2" data-bs-dismiss="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-people me-2">
                                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path>
                             </svg>Contacts</a></li>
                 </ul>
@@ -38,8 +38,8 @@
                 <hr>
                 <div class="btn-group dropup"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle me-2" alt="" width="32" height="32" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="object-fit: cover;"><strong class="text-black-50" id="username"></strong>&nbsp;</a>
                     <div class="dropdown-menu shadow text-small" data-popper-placement="top-start">
-                        <a class="toggleButton dropdown-item" href="#" data-target="content3">Change Password</a>
-                        <a class="toggleButton dropdown-item" href="#" data-target="content4">Change Username</a>
+                        <a class="toggleButton dropdown-item" href="#" data-target="content3" data-bs-dismiss="offcanvas">Change Password</a>
+                        <a class="toggleButton dropdown-item" href="#" data-target="content4" data-bs-dismiss="offcanvas">Change Username</a>
                         <div class="dropdown-divider">
                         </div>
                         <button class="dropdown-item" id="signOutButton">Sign out</button>
@@ -57,10 +57,11 @@
 </section>
 <section id="content1" class="content 1">
     <div class="container-sm">
+        <p class="text-center display-3 mb-5 p-5">Registered Students</p>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>SI no</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Class</th>
@@ -72,15 +73,47 @@
               <tbody id="data-table-body">
               </tbody>
           </table>
+          <div class="container pt-3">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#conformBox1">
+                Clear Database
+              </button>
+              <div class="modal fade" id="conformBox1" tabindex="-1" aria-labelledby="conformBox1" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="conformBox1">Are You Sure?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>You are about to delete data from our system. <span class="text-danger fw-bold">This action is irreversible.</span></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="clear-data-reg">Continue</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
     </div>
 </section>
-
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto text-danger">Alert</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body fw-bold" id="alert-status">
+      </div>
+    </div>
+  </div>
 <section id="content2" class="content 2">
     <div class="container-sm">
+        <p class="text-center display-3 mb-5 p-5">Contacts</p>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>SI no</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
@@ -90,6 +123,28 @@
               <tbody id="contact-table">
               </tbody>
           </table>
+          <div class="container pt-3">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#conformBox2">
+                Clear Database
+              </button>
+              <div class="modal fade" id="conformBox2" tabindex="-1" aria-labelledby="conformBox2" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="conformBox2">Are You Sure?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>You are about to delete data from our system. <span class="text-danger fw-bold">This action is irreversible.</span></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="clear-data-con">Continue</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
     </div>
 </section>
 

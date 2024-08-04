@@ -8766,8 +8766,7 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important
+    background-color: #201c38; !important
 }
 
 .bg-secondary {
@@ -12937,11 +12936,13 @@ section h3.section-subheading,section .section-subheading.h3 {
 
 ::-moz-selection {
     background: #201c38;
+    color: #fff;
     text-shadow: none
 }
 
 ::selection {
     background: #201c38;
+    color: #fff;
     text-shadow: none
 }
 

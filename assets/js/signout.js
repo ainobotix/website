@@ -32,6 +32,8 @@ export function handleUpdateDisplayName(event) {
   event.preventDefault();
   const newDisplayName = document.getElementById('newDisplayName').value;
   const user = auth.currentUser;
+  const toastLiveExample = document.getElementById('liveToast')
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
 
   if (user) {
     updateProfile(user, {
@@ -39,8 +41,8 @@ export function handleUpdateDisplayName(event) {
     }).then(() => {
       document.getElementById('username').textContent = newDisplayName;
       document.getElementById('welcomeMessage').textContent = `Welcome, ${newDisplayName}`;
-      document.getElementById('updateMessage').textContent = 'Display name updated successfully!';
-      window.location.href = '../../dashboard.html';
+      document.getElementById('alert-status').textContent = 'Username updated successfully!';
+      toastBootstrap.show()
     }).catch((error) => {
       console.error('Update display name error:', error);
       document.getElementById('updateErrorMessage').textContent = error.message;
