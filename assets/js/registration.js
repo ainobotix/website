@@ -23,8 +23,18 @@ function submitform(e){
     var phone2 = getElementVal('phone-3');
     var section = getElementVal('section');
     var message = getElementVal('message-2');
+    var timestamp = new Date().toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true, // Use 12-hour format
+      timeZoneName: 'longGeneric'
+  });;
 
-    saveMessages(name, email, phone, phone2, section, message);
+    saveMessages(name, email, phone, phone2, section, message, timestamp);
 
     document.querySelector(".confirm").style.display = "block";
   
@@ -35,7 +45,7 @@ function submitform(e){
     document.getElementById("registration").reset();
   }
   
-  const saveMessages = (name, email, phone, phone2, section, message) => {
+  const saveMessages = (name, email, phone, phone2, section, message, timestamp) => {
     var newContactForm = contactformdb.push();
   
     newContactForm.set({
@@ -45,6 +55,7 @@ function submitform(e){
       Whatsapp_phone: phone,
       Parents_phone: phone2,
       class: section,
+      timestamp: timestamp,
     });
   };
 

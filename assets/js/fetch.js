@@ -1,4 +1,4 @@
-    // Your Firebase configuration
+// Your Firebase configuration
     const firebaseConfig = {
         apiKey: "AIzaSyDE-Mokjha0UJc6GW-mVz02dGbmaO6-xn8",
         authDomain: "ainobotix-152ee.firebaseapp.com",
@@ -33,6 +33,7 @@
               <td>${data[key].Parents_phone}</td>
               <td>${data[key].Whatsapp_phone}</td>
               <td>${data[key].message}</td>
+              <td>${data[key].timestamp}</td>
             `;
             tbody.appendChild(row);
           }
@@ -55,6 +56,7 @@
               <td>${data[key].email}</td>
               <td>${data[key].phone}</td>
               <td>${data[key].message}</td>
+              <td>${data[key].timestamp}</td>
             `;
             tbody.appendChild(row);
           }
@@ -99,6 +101,16 @@
           toastBootstrap.show()
         })
       }
+
+      document.getElementById('export-excel1').addEventListener('click', () => {
+        var table2excel = new Table2Excel();
+        table2excel.export(document.querySelectorAll("#download-table1"),'Registered Students');
+      });
+
+      document.getElementById('export-excel2').addEventListener('click', () => {
+        var table2excel = new Table2Excel();
+        table2excel.export(document.querySelectorAll("#download-table2"),'Contact Enquiry');
+      });
 
       document.addEventListener("DOMContentLoaded", function() {
         const buttons = document.querySelectorAll('.toggleButton');
