@@ -105,11 +105,17 @@
       document.getElementById('export-excel1').addEventListener('click', () => {
         var table2excel = new Table2Excel();
         table2excel.export(document.querySelectorAll("#download-table1"),'Registered Students');
+        document.getElementById('alert-status').textContent = `Student Data Exported`;
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastBootstrap.show();
       });
 
       document.getElementById('export-excel2').addEventListener('click', () => {
         var table2excel = new Table2Excel();
         table2excel.export(document.querySelectorAll("#download-table2"),'Contact Enquiry');
+        document.getElementById('alert-status').textContent = `Enquiry Data Exported`;
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastBootstrap.show();
       });
 
       document.addEventListener("DOMContentLoaded", function() {
