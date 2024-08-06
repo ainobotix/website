@@ -17,6 +17,14 @@ document.getElementById('registration').addEventListener("submit", submitform)
 function submitform(e){
     e.preventDefault();
 
+    var formData = new FormData(this);
+    var keyValuePairs = [];
+    for (var pair of formData.entries()) {
+      keyValuePairs.push(pair[0] + "=" + pair[1]);
+    }
+
+    var formDataString = keyValuePairs.join("&")
+
     var name = getElementVal('name-2');
     var email = getElementVal('email-2');
     var phone = getElementVal('phone-2');
@@ -35,6 +43,25 @@ function submitform(e){
   });;
 
     saveMessages(name, email, phone, phone2, section, message, timestamp);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyn9FKebe0Fr5du4wQ0o9Agk788L28shZf0uUipXubH86nAt-kMZgL2Ri1VnorfQTrt/exec",
+      {
+        redirect: "follow",
+        method: "POST",
+        body: formDataString,
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+      }
+    ).then(function (response) {
+      // Check if the request was successful
+      if (response) {
+        return response; // Assuming your script returns JSON response
+      } else {
+        throw new Error("Failed to submit the form.");
+      }
+    })
 
     document.querySelector(".confirm").style.display = "block";
   
